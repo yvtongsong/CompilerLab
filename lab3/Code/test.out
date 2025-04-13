@@ -1,11 +1,20 @@
 FUNCTION main :
-DEC o 220
-t4 := #3 * #44
-t5 := &o
-t3 := t5 + t4
-t6 := *t3
-a := t6 + #4
-t7 := #5 * #4
-t8 := *a
-t1 := t8 + t7
-*t1 := #1
+READ t1
+n := t1
+IF n > #0 GOTO label1
+GOTO label2
+LABEL label1 :
+WRITE #1
+GOTO label3
+LABEL label2 :
+IF n < #0 GOTO label4
+GOTO label5
+LABEL label4 :
+t2 := #0 - #1
+WRITE t2
+GOTO label6
+LABEL label5 :
+WRITE #0
+LABEL label6 :
+LABEL label3 :
+RETURN #0
